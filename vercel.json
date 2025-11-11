@@ -1,6 +1,7 @@
 {
   "version": 2,
   "framework": null,
+  "installCommand": "echo Skipping install for static site",
   "buildCommand": "echo Skipping build for static site",
   "outputDirectory": ".",
   "routes": [
