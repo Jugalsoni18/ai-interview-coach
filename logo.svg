@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="25" cy="25" r="20" fill="#2563eb" opacity="0.1"/>
+    
+    <!-- AI Symbol -->
+    <g transform="translate(10, 10)">
+        <!-- Brain-like shape -->
+        <path d="M15 5 C15 2, 20 2, 20 5 C20 8, 15 8, 15 5" 
+              fill="none" 
+              stroke="#2563eb" 
+              stroke-width="2"/>
+        <path d="M15 5 C15 8, 10 8, 10 5 C10 2, 15 2, 15 5" 
+              fill="none" 
+              stroke="#2563eb" 
+              stroke-width="2"/>
+        
+        <!-- Circuit lines -->
+        <path d="M5 10 L15 10" 
+              fill="none" 
+              stroke="#2563eb" 
+              stroke-width="2"/>
+        <path d="M15 10 L25 10" 
+              fill="none" 
+              stroke="#2563eb" 
+              stroke-width="2"/>
+        <path d="M10 5 L10 15" 
+              fill="none" 
+              stroke="#2563eb" 
+              stroke-width="2"/>
+        <path d="M20 5 L20 15" 
+              fill="none" 
+              stroke="#2563eb" 
+              stroke-width="2"/>
+    </g>
+    
+    <!-- Text -->
+    <g transform="translate(50, 0)">
+        <!-- JobBuddy -->
+        <text x="0" y="30" 
+              font-family="Poppins, sans-serif" 
+              font-size="20" 
+              font-weight="700" 
+              fill="#1f2937">
+            JobBuddy
+        </text>
+        
+        <!-- AI -->
+        <text x="110" y="30" 
+              font-family="Poppins, sans-serif" 
+              font-size="20" 
+              font-weight="700" 
+              fill="#2563eb">
+            AI
+        </text>
+    </g>
+</svg> 

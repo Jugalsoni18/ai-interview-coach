@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobBuddy AI - Resume Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🤖</span> JobBuddy <span class="logo-ai">AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="../Job.html">Jobs</a>
+            <a href="http://127.0.0.1:5000">Interview</a>
+            <a href="../about.html">About</a>
+            <a href="C:\Users\pewpew\OneDrive\Desktop\Work[Important]\LIVE PROJECT\contact.html">Contact Us</a>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Resume Analyzer</h1>
+            <p>Upload your resume and get instant feedback</p>
+        </header>
+
+        <div class="upload-section">
+            <form id="resume-form" action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="resumeFile">Upload Resume (PDF)</label>
+                    <input type="file" id="resumeFile" name="resumeFile" accept=".pdf,.docx,.doc,.jpg,.jpeg,.png" required>
+                </div>
+                <div class="form-group">
+                    <label for="job_description">Job Description (optional)</label>
+                    <input type="text" id="job_description" name="job_description" placeholder="e.g., Software Engineer job description">
+                </div>
+                <button type="submit" class="submit-btn">Analyze Resume</button>
+            </form>
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Analyzing your resume...</p>
+        </div>
+
+        <div id="results-section" class="hidden">
+            <h2>Analysis Results</h2>
+
+            <div class="extracted-text">
+                <h3>Extracted Resume Text</h3>
+                <div id="extracted-text" class="text-content"></div>
+            </div>
+
+            <div class="results-grid">
+                <!-- Strengths -->
+                <div class="result-box" id="strengths-box">
+                    <h3>Candidate's Strengths</h3>
+                    <div id="strengths-content" class="box-content"></div>
+                </div>
+
+
+
+
+                <!-- Skills Gaps -->
+                <div class="result-box" id="skills-gaps-box">
+                    <h3>Skills/Experience Gaps</h3>
+                    <div id="skills-gaps-content" class="box-content"></div>
+                </div>
+
+                <!-- Improvement Suggestions -->
+                <div class="result-box" id="suggestions-box">
+                    <h3>Improvement Suggestions</h3>
+                    <div id="suggestions-content" class="box-content"></div>
+                </div>
+
+                <!-- Missing Keywords -->
+                <div class="result-box" id="keywords-box">
+                    <h3>Missing Keywords</h3>
+                    <div id="keywords-content" class="box-content"></div>
+                </div>
+            </div>
+
+            <div class="summary-scores">
+                <div class="summary-score">
+                    <h3>ATS Compatibility Score <span class="tooltip-icon" title="Applicant Tracking Systems (ATS) are software used by employers to scan and filter resumes. This score measures how well your resume format and structure can be read by these systems, regardless of job match.">ⓘ</span></h3>
+                    <div class="progress-container">
+                        <div id="ats-progress" class="progress-bar" style="width: 0%"></div>
+                    </div>
+                    <p><span id="ats-percentage">0</span>% Compatibility (<span id="ats-raw-score">0.0</span>/10)</p>
+                    <p class="score-description">Measures resume format readability by ATS systems</p>
+                </div>
+                <div class="summary-score" id="match-summary">
+                    <h3>Job Role Match Score <span class="tooltip-icon" title="This score indicates how well your resume matches the specific job role requirements. A higher score means your skills and experience align better with what employers are looking for in this role.">ⓘ</span></h3>
+                    <div class="progress-container">
+                        <div id="match-progress" class="progress-bar" style="width: 0%"></div>
+                    </div>
+                    <p><span id="match-percentage">0</span>% Match (<span id="match-raw-score">0.0</span>/10)</p>
+                    <p class="score-description">How well your resume matches the job requirements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
