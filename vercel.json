@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "framework": null,
+  "buildCommand": "echo Skipping build for static site",
+  "outputDirectory": ".",
   "routes": [
     {
       "src": "/(.*\\.(html|css|js|png|jpg|jpeg|gif|svg|ico|mp4|json|pdf))",
